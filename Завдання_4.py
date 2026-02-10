@@ -5,6 +5,7 @@ def get_upcoming_birthdays(users):
     future_date = today + timedelta(days=7)  # Adding 7 days to current date
     upcoming_birthdays = [] #creating empty list
 
+    
     for user in users:
         birthday = datetime.strptime(user["birthday"], "%Y.%m.%d").date() #converting sttring into date
         birthday = date(today.year, birthday.month, birthday.day) #adjusting birthday date to current year for further comparison logic
