@@ -14,12 +14,11 @@ def get_days_from_today(date):
     except ValueError: #Handling incorrect date format
         print(f"{date} - Неправильний формат дати. Будь ласка, використовуйте формат РРРР-ММ-ДД.") #Error message
         return None
-    
-
-date = input("Введіть дату у форматі РРРР-ММ-ДД: ") #Date input from the user
-
-result = get_days_from_today(date) #Calling the function with user input
 
 
-if result is not None: 
-    print(result.days) #Printing result in number of days
+if __name__ == "__main__":
+    date = input("Введіть дату у форматі РРРР-ММ-ДД: ") #Date input from the user
+    result = get_days_from_today(date) #Calling the function with user input
+
+    if result is not None: 
+        print(result.days) #Printing result in number of days
